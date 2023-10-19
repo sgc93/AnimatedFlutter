@@ -106,9 +106,28 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
   Widget catBody() {
     return Container(
+      decoration: boxDecoration(),
       width: 200,
       height: 200,
-      color: Colors.white,
+    );
+  }
+
+  boxDecoration() {
+    return BoxDecoration(
+      color: Colors.grey.shade700,
+      borderRadius: BorderRadius.circular(23),
+      boxShadow: [
+        BoxShadow(
+          offset: const Offset(-5, -5),
+          color: Colors.grey.shade100,
+          blurRadius: 18,
+        ),
+        const BoxShadow(
+          offset: Offset(5, 5),
+          color: Colors.black,
+          blurRadius: 18,
+        )
+      ],
     );
   }
 }
